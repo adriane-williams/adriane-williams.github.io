@@ -1,41 +1,38 @@
-
 body {
   margin: 0;
   font-family: "Georgia", serif;
   background: url('background.jpeg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
-}
-nav {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 1em;
   text-align: center;
 }
+
+header {
+  padding: 30px 20px 10px;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+}
+
 nav a {
-  color: #fff;
+  color: white;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em;
 }
-header {
-  text-align: center;
-  padding: 60px 20px 20px;
-  font-size: 1.5em;
-}
-section {
+
+main {
   padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  margin-bottom: 30px;
-  text-align: center;
 }
+
 .book-cover {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   border-radius: 10px;
-  margin: 10px auto;
-  display: block;
 }
+
 .button {
   display: inline-block;
   padding: 12px 24px;
@@ -46,19 +43,22 @@ section {
   font-weight: bold;
   margin-top: 10px;
 }
+
 .card-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  margin-top: 20px;
 }
+
 .card-gallery img {
   width: 200px;
   border-radius: 10px;
 }
+
 footer {
-  text-align: center;
-  font-size: 0.9em;
-  color: #ddd;
   padding: 20px;
+  font-size: 0.8em;
+  color: #ddd;
 }
