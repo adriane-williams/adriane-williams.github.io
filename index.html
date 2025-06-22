@@ -2,86 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adriane Williams | Author</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adriane Williams | Book Collection</title>
   <style>
     body {
       margin: 0;
-      font-family: "Georgia", serif;
-      background-image: url('background.jpeg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
+      font-family: 'Georgia', serif;
+      background-color: #2e1a36;
       color: #fff;
       text-align: center;
-      padding: 50px 20px;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #f2e8c9;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    header {
+      background-color: #3a1f4b;
+      padding: 20px 0;
     }
 
-    h2 {
-      margin-top: 60px;
-      font-size: 2rem;
-      color: #ffe6ea;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #f2d8e9;
     }
 
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 30px;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px;
-      border-radius: 10px;
+    nav {
+      background-color: #512d5e;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #ffd3eb;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      display: none;
+      padding: 30px 20px;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .book-cover {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
     }
 
     .button {
       display: inline-block;
-      padding: 12px 24px;
-      background: #e63946;
+      padding: 10px 20px;
+      background-color: #e63946;
       color: white;
-      text-decoration: none;
       border-radius: 5px;
+      text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s ease;
+      margin-top: 20px;
     }
 
     .button:hover {
-      background: #d62828;
+      background-color: #d62828;
     }
 
     footer {
-      margin-top: 80px;
-      font-size: 0.9rem;
+      margin-top: 50px;
+      font-size: 0.8rem;
       color: #ccc;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      padding-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>Adriane Williams</h1>
-  <p>Welcome to the official site of romance writer Adriane Williams — where emotions run deep, secrets unfold, and love always finds a way.</p>
+  <header>
+    <h1>Adriane Williams</h1>
+  </header>
 
-  <h2>📖 Sins & Sundays</h2>
-  <p>Secrets simmer. Hearts collide. Faith is tested.<br />
-  Meet Savannah Grace Carter and Zane Wilder — where every Sunday hides a little sin.</p>
-  <a href="https://www.wattpad.com/story/396424567" class="button" target="_blank">Read on Wattpad</a>
+  <nav>
+    <a href="#" onclick="showSection('books')">Books</a>
+    <a href="#" onclick="showSection('cards')">Player Cards</a>
+    <a href="#" onclick="showSection('videos')">Videos</a>
+  </nav>
 
-  <!-- Future Books: Copy this section and update as you add more! -->
-  <!--
-  <h2>📖 [Future Book Title]</h2>
-  <p>[Brief description of the next book.]</p>
-  <a href="#" class="button" target="_blank">Coming Soon</a>
-  -->
+  <!-- Books Tab -->
+  <section id="books">
+    <h2>Sins & Sundays</h2>
+    <img src="sins-cover.png" alt="Sins & Sundays Book Cover" class="book-cover" />
+    <p><strong>Secrets simmer. Hearts collide. Faith is tested.</strong></p>
+    <p>
+      Step into the world of Savannah Grace Carter and Zane Wilder —
+      where every Sunday hides a little sin.
+    </p>
+    <a href="https://www.wattpad.com/story/396424567" class="button" target="_blank">Read on Wattpad</a>
+  </section>
+
+  <!-- Player Cards Tab -->
+  <section id="cards">
+    <h2>Player Cards</h2>
+    <p>Coming soon! Meet the characters and learn their stories.</p>
+  </section>
+
+  <!-- Videos Tab -->
+  <section id="videos">
+    <h2>Videos</h2>
+    <p>Your promotional video and trailers will appear here soon!</p>
+  </section>
 
   <footer>
     &copy; 2025 Adriane Williams. All rights reserved.
   </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+
+    // Show Books tab by default
+    showSection('books');
+  </script>
 </body>
 </html>
