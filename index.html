@@ -1,57 +1,50 @@
-
-    <!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adriane Williams | Author</title>
+  <title>Adriane Williams | Books & Stories</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
+      font-family: "Georgia", serif;
       background: url('background.jpeg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-    nav a {
-      color: #f2e8c9;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-    .tab {
-      display: none;
-      padding: 50px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1em;
       text-align: center;
     }
-    .tab.active {
-      display: block;
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      font-size: 1.5em;
     }
-    p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 30px;
-    }
-    .cards-container img {
-      width: 250px;
-      margin: 10px;
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2em;
     }
     .book-cover {
-      width: 200px;
-      margin: 20px auto;
-      display: block;
+      max-width: 100%;
       border-radius: 10px;
+      margin: 10px auto;
+      display: block;
     }
     .button {
       display: inline-block;
@@ -61,64 +54,70 @@
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-      margin-top: 10px;
+      margin: 10px auto;
+      text-align: center;
+    }
+    .card-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card-gallery img {
+      width: 200px;
+      border-radius: 10px;
     }
     footer {
-      margin: 50px 0;
       text-align: center;
-      font-size: 0.9rem;
-      color: #ccc;
+      font-size: 0.9em;
+      color: #ddd;
+      padding: 20px;
     }
   </style>
-  <script>
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-    }
-    window.onload = () => showTab('home');
-  </script>
 </head>
 <body>
-  <nav>
-    <a href="#" onclick="showTab('home')">Home</a>
-    <a href="#" onclick="showTab('books')">Books</a>
-    <a href="#" onclick="showTab('cards')">Player Cards</a>
-    <a href="#" onclick="showTab('videos')">Videos</a>
-  </nav>  <!-- Home Tab -->  <div class="tab" id="home">
+  <header>
     <h1>Adriane Williams</h1>
-    <p>Author of emotionally-charged romance stories. Southern roots, dramatic twists, and heart-filled moments. Welcome to my world of storytelling.</p>
-  </div>  <!-- Books Tab -->  <div class="tab" id="books">
-    <h1>Sins & Sundays</h1>
-    <img src="sins_and_sundays_cover.png" alt="Sins & Sundays Cover" class="book-cover" />
-    <p>Secrets simmer. Hearts collide. Faith is tested.</p>
-    <a href="https://www.wattpad.com/story/396424567?utm_source=android&utm_medium=link&utm_content=story_info&wp_page=story_details_button&wp_uname=bubblegum14689" class="button" target="_blank">Read Now</a><h2 style="margin-top: 50px">Watch the Promo</h2>
-<div class="video-container">
-  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/t/ZP8rmpyEu" data-video-id="ZP8rmpyEu" style="max-width: 605px;min-width: 325px;">
-    <section> </section>
-  </blockquote>
-  <script async src="https://www.tiktok.com/embed.js"></script>
-</div>
-
-  </div>  <!-- Player Cards Tab -->  <div class="tab" id="cards">
-    <h1>Meet the Characters</h1>
-    <div class="cards-container">
-      <img src="savannah_card.png" alt="Savannah Grace Carter">
-      <img src="zane_card.png" alt="Zane Wilder">
-      <img src="ava_card.png" alt="Ava">
-      <img src="carter_card.png" alt="Pastor Carter">
-      <img src="elizabeth_card.png" alt="Elizabeth Carter">
+    <p>Writer of romance, drama, and secrets worth turning the page for.</p>
+  </header>  <nav>
+    <a href="#about">About</a>
+    <a href="#books">Books</a>
+    <a href="#cards">Player Cards</a>
+    <a href="#videos">Videos</a>
+  </nav>  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm Adriane Williams — a storyteller passionate about faith, love, and everything in between. My books blend drama, emotion, and unforgettable characters. Thanks for being here!
+    </p>
+  </section>  <section id="books">
+    <h2>Books</h2>
+    <h3>Sins & Sundays</h3>
+    <img src="sins_and_sundays_cover.png" alt="Sins & Sundays Book Cover" class="book-cover" />
+    <p>
+      Secrets simmer. Hearts collide. Faith is tested.<br />
+      Step into the world of Savannah Grace Carter and Zane Wilder — where every Sunday hides a little sin.
+    </p>
+    <a href="https://www.wattpad.com/story/396424567?utm_source=android&utm_medium=link&utm_content=story_info&wp_page=story_details_button&wp_uname=bubblegum14689" class="button" target="_blank">Read Now</a>
+  </section>  <section id="cards">
+    <h2>Player Cards</h2>
+    <div class="card-gallery">
+      <img src="savannah_card.png" alt="Savannah" />
+      <img src="zane_card.png" alt="Zane" />
+      <img src="ava_card.png" alt="Ava" />
+      <img src="pastor_carter_card.png" alt="Pastor Carter" />
+      <img src="elizabeth_carter_card.png" alt="Elizabeth Carter" />
     </div>
-  </div>  <!-- Videos Tab -->  <div class="tab" id="videos">
-    <h1>Video Gallery</h1>
-    <div class="video-container">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/t/ZP8rmpyEu" data-video-id="ZP8rmpyEu" style="max-width: 605px;min-width: 325px;">
-        <section> </section>
+  </section>  <section id="videos">
+    <h2>Videos</h2>
+    <h3>Watch the Promo</h3>
+    <div style="text-align:center">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@adriane_ally/video/7518706762099248415" data-video-id="7518706762099248415" style="max-width: 325px;min-width: 200px;">
+        <section></section>
       </blockquote>
       <script async src="https://www.tiktok.com/embed.js"></script>
     </div>
-  </div>  <footer>
+  </section>  <footer>
     &copy; 2025 Adriane Williams. All rights reserved.
   </footer>
 </body>
-    </html>
+</html>
